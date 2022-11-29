@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ms-pedido
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'

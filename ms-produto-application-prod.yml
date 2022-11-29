@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: ms-produto
+  datasource:
+    url: jdbc:postgresql://localhost:5433/ms_erp_produto
+    username: postgres
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      ddl-auto: none
+flyway:
+    url: jdbc:postgresql://localhost:5433/
+    schema: ms_erp_produto
+    default-schema: ms_erp_produto
+    username: postgres
+    password: root
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'

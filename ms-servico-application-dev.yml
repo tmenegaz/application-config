@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: ms-servico
+  datasource:
+    url: jdbc:postgresql://localhost:5433/ms_erp_servico
+    username: postgres
+    password: root
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:lob:
+          non_contextual_creation: true
+        hbm2ddl:
+          delimiter: ;
+      javax:
+        persistence:
+          schema-generation:
+            create-source: metadata
+            scripts:
+              action: create
+              create-target: create.sql
+    hibernate:
+      ddl-auto: update
+flyway:
+    url: jdbc:postgresql://localhost:5433/
+    schema: ms_erp_servico
+    default-schema: ms_erp_servico
+    username: postgres
+    password: root
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
