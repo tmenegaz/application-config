@@ -1,7 +1,9 @@
 server:
   port: ${PORT:0}
 spring:
-  config:
+  cloud:
+    config:
+      uri: http://config-service:8888
   profiles:
     active: dev
   application:
