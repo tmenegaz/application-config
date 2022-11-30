@@ -1,8 +1,4 @@
 spring:
-  profiles:
-    active: dev
-  application:
-    name: produto
   datasource:
     url: jdbc:postgresql://localhost:5433/ms_erp_produto
     username: postgres
@@ -33,15 +29,3 @@ flyway:
     default-schema: ms_erp_produto
     username: postgres
     password: root
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-        - '*'
-logging:
-  level:
-    org:
-      springframework:
-        data:
-          r2dbc: DEBUG

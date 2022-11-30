@@ -1,8 +1,4 @@
 spring:
-  profiles:
-    active: prod
-  application:
-    name: ms-servico
   datasource:
     url: jdbc:postgresql://localhost:5433/ms_erp_servico
     username: postgres
@@ -23,9 +19,3 @@ flyway:
     default-schema: ms_erp_servico
     username: postgres
     password: root
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-        - '*'
