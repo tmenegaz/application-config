@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/ms_erp_produto
+    url: jdbc:postgresql://localhost:5433/ms_erp_produto_servico
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
@@ -15,7 +15,7 @@ spring:
       ddl-auto: none
 flyway:
     url: jdbc:postgresql://localhost:5433/
-    schema: ms_erp_produto
-    default-schema: ms_erp_produto
+    schema: ms_erp_produto_servico
+    default-schema: ms_erp_produto_servico
     username: postgres
     password: root
